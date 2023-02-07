@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/fondo_degradado"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+
+    <!--Este linear layout me sirve para centrar el texto-->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="Bienvenido a App Luna"
+            android:textSize="30dp"
+            android:drawableStart="@drawable/lunita"
+            />
+
+    </LinearLayout>
+
+    <!--Aqui empezaremos con los campos de textos-->
+
+    <!--no utilice los EditText normal Utilice los de material Design-->
+    <!--Aqui tenemos el textImputLayout y dentro de este se pone un editText-->
+    <com.google.android.material.textfield.TextInputLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+        app:startIconDrawable="@drawable/email"
+        android:layout_marginTop="70dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+       <com.google.android.material.textfield.TextInputEditText
+           android:id="@+id/editText_Correoo"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+            android:hint="Correo"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <!--aqui esta el inputLayout para la Contraseña-->
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:startIconDrawable="@drawable/key"
+        android:layout_marginTop="40dp"
+        app:endIconMode="password_toggle"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editText_Contraseñaa"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Contraseña"
+            android:inputType="textPassword"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!--Boton de iniciar seccion-->
+    <Button
+        android:id="@+id/btn_IniciarSesion"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="Iniciar sesion"
+        android:backgroundTint="#F4E55D"
+        android:layout_marginTop="25dp"
+        app:cornerRadius="20dp"
+        android:textColor="@color/ColorDos"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="¿Olvidaste tu Contraseña?"
+        android:layout_marginTop="20dp"
+        android:textSize="17dp"
+        android:gravity="center"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="¿No tienes una cuenta?"
+        android:layout_marginTop="19dp"
+        android:textSize="17dp"
+        android:gravity="center"/>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:orientation="horizontal"
+        android:layout_gravity="center">
+
+        <Button
+            android:id="@+id/btn_Recuperar"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:text="Recuperar"
+            android:backgroundTint="#F368C5B7"
+            android:layout_marginRight="20dp"
+            app:cornerRadius="20dp"
+            android:textColor="@color/ColorDos"
+            android:layout_gravity="center"/>
+
+        <Button
+            android:id="@+id/Btn_Registrate"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:backgroundTint="#F368C5B7"
+            android:text="Registrate"
+            android:textColor="@color/ColorDos"
+            app:cornerRadius="20dp" />
+
+    </LinearLayout>
+
+
+
+
+
+
+</LinearLayout>

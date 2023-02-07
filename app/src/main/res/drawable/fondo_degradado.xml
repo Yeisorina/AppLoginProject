@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--primero creo un item-->
+    <item>
+        <!--Con la etiqueta shade defino la forma del degradado-->
+        <shape>
+
+            <!--en esta etiqueta uso los colores que defini en el archivo Colors.XML-->
+            <gradient
+                android:startColor="@color/ColorUno"
+                android:centerColor="@color/ColorDos"
+                android:endColor="@color/ColorTres"
+
+                android:type="linear"
+                android:angle="270"
+                />
+
+        </shape>
+    </item>
+
+</selector>
